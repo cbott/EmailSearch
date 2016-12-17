@@ -20,7 +20,7 @@ def getEmail(name):
     try:
         for person in data:
             #print person
-            if _valid(person):
+            if len(data) == 1 or _valid(person):
                 results.append(str(person["email"]))
     except Exception as e:
         results = ["error"]
